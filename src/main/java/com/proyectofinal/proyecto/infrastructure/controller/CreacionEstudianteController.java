@@ -11,6 +11,7 @@ import com.proyectofinal.proyecto.domain.Estudiante;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+
 @Slf4j
 @RestController
 @RequestMapping("estudiantes")
@@ -21,11 +22,10 @@ public class CreacionEstudianteController {
 
     @PostMapping
     public Estudiante crearEstudiante(@RequestBody Estudiante estudiante){
+
+
         log.info("Se va a crear un estudiante");
+
         return creacionEstudianteService.crearEstudiante(estudiante);
     }
-
-
-    
-    
 }
